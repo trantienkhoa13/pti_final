@@ -19,7 +19,7 @@ from PyQt6.QtWidgets import (
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+# dung de doc file roi lay duong dan
 
 # Tra ve duong dan day du cua file trong thu muc du an.
 def get_path(file_name):

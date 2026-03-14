@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "name": "ICPC 2025 vòng Quốc Gia",
-      "difficulty": "national",
-      "date": "2025-09-11",
-      "participants": 1506,
-      "status": "active"
+      "name": "VOI Revision - Dijkstra",
+      "difficulty": "medium-hard",
+      "date": "2025-15-12",
+      "participants": 3027,
+      "link":"https://oj.vnoi.info/contest/bedao_r23"
     },
     {
       "id": 4,
