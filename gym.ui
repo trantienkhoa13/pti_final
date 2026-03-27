@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>578</width>
-    <height>383</height>
+    <width>626</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,9 +37,9 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>140</y>
-      <width>321</width>
-      <height>131</height>
+      <y>180</y>
+      <width>341</width>
+      <height>261</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -195,9 +195,9 @@ QPushButton:pressed {
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>50</y>
-      <width>491</width>
+      <x>30</x>
+      <y>90</y>
+      <width>531</width>
       <height>61</height>
      </rect>
     </property>
@@ -237,7 +237,7 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
-     <item row="0" column="4">
+     <item row="0" column="1">
       <widget class="QPushButton" name="contest_button">
        <property name="text">
         <string>contest</string>
@@ -259,14 +259,33 @@ QPushButton:pressed {
      <string>account</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>picture/download (1).png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>578</width>
-     <height>18</height>
+     <width>626</width>
+     <height>29</height>
     </rect>
    </property>
   </widget>

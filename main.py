@@ -42,6 +42,31 @@ def load_contests():
     return []
 
 
+# Doc du lieu gym tu file JSON, tra ve dict voi key la type.
+def load_gym():
+    file_path = get_path("gym.json")
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    gym_list = []
+    if type(data) == dict and "gym" in data:
+        gym_list = data["gym"]
+    elif type(data) == list:
+        gym_list = data
+
+    # Chuyen thanh dict: {type.strip(): link} de tra cuu nhanh
+    gym_map = {}
+    for item in gym_list:
+        if type(item) == dict:
+            key = item.get("type", "").strip().lower()
+            link = item.get("link", "")
+            if key:
+                gym_map[key] = link
+
+    return gym_map
+
+
 class Login(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -399,6 +424,45 @@ class Gym(QMainWindow):
         self.contest_button.clicked.connect(self.show_contest)
         self.history_button.clicked.connect(self.show_main)
         self.friend_button.clicked.connect(self.show_friend)
+
+        # Ket noi cac nut cap do voi link tu gym.json
+        self.connect_gym_buttons()
+
+    def connect_gym_buttons(self):
+        try:
+            gym_map = load_gym()
+        except Exception as error:
+            QMessageBox.warning(self, "Error", f"Khong doc duoc gym.json:\n{error}")
+            return
+
+        # Map ten nut trong .ui -> key tuong ung trong gym.json
+        button_map = {
+            "veryeasy": "very easy",
+            "easy": "easy",
+            "normal": "normal",
+            "hard": "hard",
+            "expert": "expert",
+            "touraments": "touraments",
+        }
+
+        for btn_name, gym_key in button_map.items():
+            button = getattr(self, btn_name, None)
+            if button is None:
+                continue
+
+            link = gym_map.get(gym_key, "")
+            if link:
+                button.clicked.connect(
+                    lambda checked, url=link: self.open_link(url)
+                )
+            else:
+                button.setEnabled(False)
+
+    def open_link(self, link):
+        if link:
+            webbrowser.open(link)
+        else:
+            QMessageBox.warning(self, "Error", "Khong co link cho muc nay")
 
     def show_account(self):
         account.show()

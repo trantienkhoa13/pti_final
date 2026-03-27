@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>511</width>
-    <height>486</height>
+    <width>623</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>90</y>
-      <width>480</width>
-      <height>100</height>
+      <width>561</width>
+      <height>101</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -71,7 +71,7 @@
    <widget class="QPushButton" name="account_button">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>460</x>
       <y>40</y>
       <width>113</width>
       <height>32</height>
@@ -84,7 +84,7 @@
    <widget class="QLabel" name="history">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>240</x>
       <y>180</y>
       <width>171</width>
       <height>100</height>
@@ -103,44 +103,38 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>260</y>
-      <width>60</width>
-      <height>16</height>
+      <x>130</x>
+      <y>280</y>
+      <width>371</width>
+      <height>80</height>
      </rect>
     </property>
-    <property name="text">
-     <string>date</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>260</y>
-      <width>60</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>elo</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>260</y>
-      <width>60</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>name</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>date</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>elo</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>name</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -148,7 +142,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>511</width>
+     <width>623</width>
      <height>29</height>
     </rect>
    </property>
