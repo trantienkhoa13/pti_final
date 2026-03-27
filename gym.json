@@ -1,0 +1,30 @@
+{
+    "gym": [
+    {
+
+      "type" : "very easy" ,
+      "link": "https://marisaoj.com/level/1"
+    },
+    {
+      "type" : " easy" ,
+      "link":"https://marisaoj.com/level/2"
+    },
+    {
+      "type" : "normal" ,
+      "link":"https://marisaoj.com/level/3"
+    },
+
+    {
+        "type" : "hard" ,
+      "link": "https://marisaoj.com/level/5"
+    },
+    {
+        "type" : "expert" ,
+      "link": "https://marisaoj.com/level/6"
+    },
+    {
+        "type" : "touraments" ,
+      "link": "https://marisaoj.com/competitions"
+    }
+  ]
+}
